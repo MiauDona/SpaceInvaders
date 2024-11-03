@@ -9,6 +9,7 @@ public class UtilsJava {
 
     /**
      * Pide una String por consola al usuario
+     *
      * @param mensaje Mensaje que se va a introducir para pedir el String
      * @return Devuelve la String que introduce el usuario
      */
@@ -20,6 +21,7 @@ public class UtilsJava {
 
     /**
      * Pide un numero Int por consola al usuario
+     *
      * @param mensaje Mensaje que se va a introducir para pedir el String
      * @return Devuelve el Int que introduce el usuario
      */
@@ -29,6 +31,7 @@ public class UtilsJava {
 
     /**
      * Pide un Double por consola al usuario
+     *
      * @param mensaje Mensaje que se va a introducir para pedir el Double
      * @return Devuelve un Double que introduce el usuario
      */
@@ -38,6 +41,7 @@ public class UtilsJava {
 
     /**
      * Pide un Float por consola al usuario
+     *
      * @param mensaje Mensaje que se va a introducir para pedir el Double
      * @return Devuelve un Double que introduce el usuario
      */
@@ -47,6 +51,7 @@ public class UtilsJava {
 
     /**
      * Pide 2 numeros, el mínimo y el máximo al usuario por consola
+     *
      * @return Devuelve el número random entre los 2 numeros introducidos, minimos y maximos incluidos
      */
     public static int pedirNumerosParaRandom() {
@@ -59,13 +64,14 @@ public class UtilsJava {
 
     /**
      * Comprueba si el numero introducido es primo
+     *
      * @param numeroIntroducido Numero Int a comprobar que sea primo
      * @return Devuelve un boolean, true si es primo y si no lo es, false
      */
     public static boolean esNumeroPrimo(int numeroIntroducido) {
         boolean esPrimo = true;
 
-        for (int i = numeroIntroducido-1; i > 1; i--) {
+        for (int i = numeroIntroducido - 1; i > 1; i--) {
             if (numeroIntroducido % i == 0) {
                 esPrimo = false;
                 System.out.println("El número no es primo");
@@ -78,6 +84,7 @@ public class UtilsJava {
 
     /**
      * Muestra el array entero de int
+     *
      * @param array Array de Int para mostrar
      */
     public static void mostrarArrayInts(int[] array) {
@@ -88,6 +95,7 @@ public class UtilsJava {
 
     /**
      * Muestra el array entero de String
+     *
      * @param array Array de String para mostrar
      */
     public static void mostrarArrayStrings(String[] array) {
@@ -98,6 +106,7 @@ public class UtilsJava {
 
     /**
      * Muestra el array entero de boolean
+     *
      * @param array Array de boolean para mostrar
      */
     public static void mostrarArrayBooleans(boolean[] array) {
@@ -108,6 +117,7 @@ public class UtilsJava {
 
     /**
      * Convierte una String a un Array de Char y lo muestra
+     *
      * @param string String que quieres mostrar en forma de Char
      * @return Array de Char proveniente de la String introducida
      */
@@ -120,16 +130,17 @@ public class UtilsJava {
 
     /**
      * Crea un array con numeros aleatorios entre 2 números
+     *
      * @param tamanio El tamaño del array (int)
-     * @param min El numero minimo para los aleatorios (int)
-     * @param max El numero maximo para los aleatorios (int)
+     * @param min     El numero minimo para los aleatorios (int)
+     * @param max     El numero maximo para los aleatorios (int)
      * @return El array con los numeros aleatorios (int[])
      */
     public static int[] crearArrayIntsAleatoriosEntreNumeros(int tamanio, int min, int max) {
         int[] array = new int[tamanio];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = RANDOM.nextInt(min,max+1);
+            array[i] = RANDOM.nextInt(min, max + 1);
         }
 
         return array;
