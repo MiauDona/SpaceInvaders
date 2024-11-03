@@ -48,7 +48,7 @@ public class Main {
                 if (primerAtaque) {
                     primerAtaque = false;
                 } else {
-                    tiempoDeEspera(1, "ataque");
+                    tiempoDeEspera(3, "ataque");
                 }
 
                 humanos[humano].recibirDano(invasores[invasor]);
@@ -65,7 +65,7 @@ public class Main {
             }
 
             System.out.println("\nRonda ganada por " + tipo);
-            tiempoDeEspera(1, "ronda");
+            tiempoDeEspera(10, "ronda");
             ronda++;
         }
 
@@ -98,6 +98,6 @@ public class Main {
             espera--;
         }
 
-        System.out.println("\rSiguiente " + motivo + " comienza ya.\n");
+        System.out.println("\rSiguiente " + motivo + " comienza ya.          \n");
     }
 }
