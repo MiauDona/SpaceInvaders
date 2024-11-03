@@ -18,6 +18,10 @@ public abstract class Jugador {
         return partesCuerpo;
     }
 
+    public EntityType getTipo() {
+        return EntityType.UNKNOWN;
+    }
+
     public void setPartesCuerpo(String[] partesCuerpo) {
         this.partesCuerpo = partesCuerpo;
     }
@@ -56,6 +60,10 @@ public abstract class Jugador {
 
     public void setVida(int vida) {
         this.vida = vida;
+    }
+
+    public String getNombre() {
+        return getTipo() + " " + getId();
     }
 
     float disparoACuerpo() {

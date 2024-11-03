@@ -24,6 +24,7 @@ public class Main {
 
         int anteriorVivo = 0;
         for (int i = 0; i < humanos.length; i++) {
+            System.out.println("--------Ronda " + i + "-------");
 
             while (humanos[i].isEstaVivo() && invasores[i].isEstaVivo()) {
                 humanos[i].recibirDano(invasores[i]);
