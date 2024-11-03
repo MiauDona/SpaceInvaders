@@ -17,7 +17,7 @@ public class Humano extends Jugador {
 
     @Override
     public String toString() {
-        return "Humano: " + getId() + " vida:" + getVida() + " escudo: " + escudo + " Dano Arma: " + danoArma + " Está vivo: " + isEstaVivo();
+        return "Humano: " + getId() + " Vida:" + getVida() + " Escudo: " + escudo + " Daño: " + danoArma + " Vivo: " + isEstaVivo();
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Humano extends Jugador {
             super.recibirDano(inflictor);
         } else {
             escudo = false;
-            System.out.println(getNombre() + " ha sido disparado y ha perdido el escudo");
+            System.out.println(inflictor.getNombre() + " ha disparado a " + getNombre() + " y ha perdido el escudo");
         }
     }
 }
