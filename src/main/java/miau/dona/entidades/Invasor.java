@@ -15,6 +15,6 @@ public class Invasor extends Jugador {
 
     @Override
     public String toString() {
-        return "Invasor: " + super.getId() + " vida:" + super.getVida() + " dano arma: " + danoArma;
+        return "Invasor: " + getId() + " vida:" + getVida() + " dano arma: " + danoArma;
     }
 }

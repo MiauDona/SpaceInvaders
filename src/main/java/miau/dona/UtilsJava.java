@@ -1,11 +1,12 @@
 package miau.dona;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
 public class UtilsJava {
     // Crea un random
-    public static final Random RANDOM = new Random();
+    public static final Random RANDOM = new SecureRandom();
 
     /**
      * Pide una String por consola al usuario

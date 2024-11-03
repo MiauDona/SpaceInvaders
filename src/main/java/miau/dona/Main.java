@@ -3,11 +3,12 @@ package miau.dona;
 import miau.dona.entidades.Humano;
 import miau.dona.entidades.Invasor;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static void main(String[] args) {
-        /* No entiendo como va a ser el juego*/
         Humano[] humanos = new Humano[3];
         Invasor[] invasores = new Invasor[3];
 
@@ -29,10 +30,30 @@ public class Main {
             while (humanos[i].isEstaVivo() && invasores[i].isEstaVivo()) {
                 humanos[i].recibirDano(invasores[i]);
                 invasores[i].recibirDano(humanos[i]);
-                System.out.println();
+
+                tiempoEntreAtaques();
             }
+
+        }
+        System.out.println("FIN DE LA PARTIDA");
+    }
+
+    public static void tiempoEntreAtaques() {
+        int espera = 8;
+
+        while (espera > 0) {
+            System.out.print("\rSiguiente ataque en " + espera +" segundos...");
+
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                System.out.println("Error en la espera de cambio de ronda.");
+                throw new RuntimeException(e);
+            }
+
+            espera--;
         }
 
-        System.out.println("FIN DE LA PARTIDA");
+        System.out.println("\rEl siguiente ataque comienza ya.\n\n");
     }
 }

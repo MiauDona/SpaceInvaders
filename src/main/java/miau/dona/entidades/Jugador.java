@@ -75,10 +75,10 @@ public abstract class Jugador {
             int danoArma = inflictor.getDanoArma();
             float disparoCuerpo = disparoACuerpo();
 
-            System.out.println(inflictor.getNombre() + " inflinge: " + (int) (danoArma * disparoCuerpo));
-            System.out.println("Vida restante de " + getNombre() + ": " + (int) (getVida() - danoArma * disparoCuerpo));
+            System.out.print(inflictor.getNombre() + " inflinge: " + (int) (danoArma * disparoCuerpo));
+            System.out.println(" || Vida restante de " + getNombre() + ": " + (int) (getVida() - danoArma * disparoCuerpo));
             setVida((int) (getVida() - danoArma * disparoCuerpo));
-            
+
             if (getVida() <= 0) {
                 setEstaVivo(false);
                 System.out.println(getNombre() + " ha muerto");
